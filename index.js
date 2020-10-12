@@ -8,7 +8,7 @@ const downloadUrl = "https://media-convert-input-output.s3.amazonaws.com/input/b
 
 const download = (url, dest, callback, { name, height }) => {
     const file = fs.createWriteStream(dest);
-    const request =  https.get(url, function(response) {
+    https.get(url, function(response) {
         console.log("downloading")
         response.pipe(file);
         file.on('finish',  () => {
@@ -18,9 +18,9 @@ const download = (url, dest, callback, { name, height }) => {
             console.log(err)
         });
     });
-    request.setTimeout(12000, function () { // timeout 12 secs to abort the process if there's an issue ( eg. connection issue)
-        request.abort();
-    });
+    // request.setTimeout(12000, function () { // timeout 12 secs to abort the process if there's an issue ( eg. connection issue)
+    //     request.abort();
+    // });
 }
 
 const convertDownloadedFile = ({ name, height, dest }) => {
