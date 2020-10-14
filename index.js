@@ -49,5 +49,6 @@ ${name}_${height}p.m3u8
     createMasterPlaylist(playlistInput, name);
 }
 
-download(downloadUrl, dest, convertDownloadedFile, { name: "batman_downloaded", height: "1080" } )
+//download(downloadUrl, dest, convertDownloadedFile, { name: "batman_downloaded", height: "1080" } )
+convertDownloadedFile({ name: "batman", dest: "./videos/batman.mp4", height: "360"})
 

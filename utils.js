@@ -17,15 +17,15 @@ const correspondingWidth = (height) => {
 const correspondingBandwidths = (height) => {
     switch (height) {
         case "1080":
-            return {bandwidth: "11136797", avgBandwidth: "8670201"};
+            return {bandwidth: "3936797", avgBandwidth: "3670201"};
         case "720":
-            return {bandwidth: "6632834", avgBandwidth: "5127889"};
+            return {bandwidth: "1732834", avgBandwidth: "1527889"};
         case "480":
-            return {bandwidth: "4820024", avgBandwidth: "3627026"};
+            return {bandwidth: "1100024", avgBandwidth: "927026"};
         case "360":
-            return {bandwidth: "892812", avgBandwidth: "698684"};
+            return {bandwidth: "698684", avgBandwidth: "598684"};
         default:
-            return {bandwidth: "892812", avgBandwidth: "698684"};
+            return {bandwidth: "698684", avgBandwidth: "598684"};
     }
 }
 
