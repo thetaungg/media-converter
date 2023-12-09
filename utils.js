@@ -2,6 +2,8 @@ const {exec, spawn} = require("child_process");
 
 const correspondingWidth = (height) => {
     switch (height) {
+        case "2160":
+            return "3840";
         case "1080":
             return "1920";
         case "720":
@@ -16,8 +18,10 @@ const correspondingWidth = (height) => {
 };
 const correspondingBandwidths = (height) => {
     switch (height) {
-        case "1080":
+        case "2160":
             return {bandwidth: "3936797", avgBandwidth: "3670201"};
+        case "1080":
+            return {bandwidth: "2936797", avgBandwidth: "2670201"};
         case "720":
             return {bandwidth: "1732834", avgBandwidth: "1527889"};
         case "480":
@@ -91,6 +95,8 @@ EOL
 
 const generateWantedQualities = (height) => {
     switch (height){
+        case "2160":
+            return [ "360", "480", "720", "1080", "2160"];
         case "1080":
             return [ "360", "480", "720", "1080" ];
         case "720":

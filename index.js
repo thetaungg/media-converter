@@ -3,8 +3,8 @@ const { convertVideoToM3U8, createMasterPlaylist, correspondingWidth, generateWa
 const https = require('https');
 const fs = require('fs');
 
-const dest = "./videos/batman_downloaded.mp4"
-const downloadUrl = "https://media-convert-input-output.s3.amazonaws.com/input/batman.mp4"
+const dest = "./videos/bigbuckbunny_downloaded.mp4"
+const downloadUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
 
 const download = (url, dest, callback, { name, height }) => {
     const file = fs.createWriteStream(dest);
@@ -49,6 +49,6 @@ ${name}_${height}p.m3u8
     createMasterPlaylist(playlistInput, name);
 }
 
-//download(downloadUrl, dest, convertDownloadedFile, { name: "batman_downloaded", height: "1080" } )
-convertDownloadedFile({ name: "batman", dest: "./videos/batman.mp4", height: "360"})
+// download(downloadUrl, dest, convertDownloadedFile, { name: "bigbuckbunny_downloaded", height: "1080" } )
+convertDownloadedFile({ name: "thankyou_final-improved", dest: "./videos/thankyou_final-improved.mp4", height: "2160"})
 
